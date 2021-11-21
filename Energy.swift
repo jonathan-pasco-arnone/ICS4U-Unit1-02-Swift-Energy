@@ -42,6 +42,7 @@ func calculateEnergy() throws {
 }
 
 do {
+    // Calls the function to be tested fro errors.
     try calculateEnergy()
 } catch {
     print("That was an invalid integer")
