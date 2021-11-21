@@ -11,20 +11,43 @@
 // Speed of light squared.
 let SOLS = Double(299792458 * 299792458)
 
+// Inputs.
+print("Please enter mass in kg: ")
+var mass = readLine()
+
+// Making an error case.
+enum MyError: Error {
+    case invalidInteger(String)
+}
+
+func calculateEnergy() throws {
+
+    if let massDouble = Double(mass!) {
+
+        // Calculations.
+        let energy = massDouble * SOLS
+
+        // Outputs.
+        print("If the mass is ", String(mass!),
+            "kg then the energy is ", String(energy))
+        print("\nDone.")
+
+     } else {
+
+        /* This throws the an error out of the called function
+        and activates the catch statement.
+        */
+
+        throw MyError.invalidInteger("Error")
+     }
+
+}
+
 do {
-    // Inputs.
-    print("Please enter mass in kg: ")
-    var mass = readLine()
 
-    // Calculations.
-    try Double(mass!)
-    /* let energy = massDouble * SOLS
+    try calculateEnergy()
 
-    // Outputs.
-    print("If the mass is ", String(mass!),
-    "kg then the energy is ", String(energy))
-    */
-} catch let localError {
-    print(localError)
+} catch {
+    print("That was an invalid integer")
     print("\nDone.")
 }
