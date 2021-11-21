@@ -4,8 +4,7 @@
 //  Version 1.0
 //  Copyright (c) 2021 MTHS. All rights reserved.
 //
-//  The Hello World! program implements an application that
-//  simply displays "Hello World!" to the standard output.
+//  This program calculates energy from mass.
 
 // Variables.
 let speedOfLightSquared = Double(299792458 * 299792458)
