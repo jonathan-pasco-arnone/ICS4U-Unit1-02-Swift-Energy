@@ -8,8 +8,7 @@
 //  simply displays "Hello World!" to the standard output.
 
 // Variables.
-// Speed of light squared.
-let SOLS = Double(299792458 * 299792458)
+let speedOfLightSquared = Double(299792458 * 299792458)
 
 // Inputs.
 print("Please enter mass in kg: ")
@@ -25,7 +24,7 @@ func calculateEnergy() throws {
     if let massDouble = Double(mass!) {
 
         // Calculations.
-        let energy = massDouble * SOLS
+        let energy = massDouble * speedOfLightSquared
 
         // Outputs.
         print("If the mass is ", String(mass!),
@@ -40,13 +39,10 @@ func calculateEnergy() throws {
 
         throw MyError.invalidInteger("Error")
      }
-
 }
 
 do {
-
     try calculateEnergy()
-
 } catch {
     print("That was an invalid integer")
     print("\nDone.")
