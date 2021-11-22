@@ -27,7 +27,7 @@ func calculateEnergy() throws {
 
         // Outputs.
         print("If the mass is ", String(mass!),
-            "kg then the energy is ", String(energy))
+            "kg then the energy is ", String(energy), " J")
         print("\nDone.")
 
      } else {
@@ -35,7 +35,6 @@ func calculateEnergy() throws {
         /* This throws the an error out of the called function
         and activates the catch statement.
         */
-
         throw MyError.invalidInteger("Error")
      }
 }
